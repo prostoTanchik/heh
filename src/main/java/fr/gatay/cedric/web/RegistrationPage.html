@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<head>
+    <title>Регистрация</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        body {
+          display:flex;
+          align-items:center;
+        }
+        input {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <h3>Регистрация</h3>
+        <form wicket:id="form">
+            <div>
+                <div>Имя</div>
+                <input type="text" wicket:id="firstName"/>
+            </div>
+            <div>
+                <div>Фамилия</div>
+                <input type="text" wicket:id="secondName"/>
+            </div>
+            <div>
+                <div>Отчество</div>
+                <input type="text" wicket:id="patronymic"/>
+            </div>
+            <div>
+                <div>Email</div>
+                <input type="email" wicket:id="email"/>
+            </div>
+            <div>
+                <div>Введите пароль</div>
+                <input type="password" wicket:id="password"/>
+            </div>
+            <div>
+                <div>Подтвердите пароль</div>
+                <input type="password" wicket:id="confirmPassword"/>
+            </div>
+            <input style="margin-top:9px;" type="submit" wicket:id="submit" value="Зарегистрироваться"/>
+        </form>
+        <div wicket:id="feedback"></div>
+        <span>Уже есть аккаунт? </span><a href="/authorization.html">Войти</a>
+    </div>
+</body>
+</html>

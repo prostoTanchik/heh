@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+    <title>Сообщения</title>
+    <meta charset="UTF-8"/>
+    <style>
+        img {
+            float: left;
+            width: 45px;
+            height: 45px;
+            object-fit: cover;
+            margin-right: 5px;
+        }
+    </style>
+</wicket:head>
+<body>
+    <wicket:extend>
+        <h2 class="mb-3">Сообщения</h2>
+        <a wicket:id="back">Назад</a>
+        <div wicket:id="messagesContainer" class="h-100">
+            <div class="overflow-auto w-100 h-75 border">
+                <div wicket:id="messages" class="p-3 m-1" style="background-color: #EEEEEE">
+                    <img wicket:id="avatar"/>
+                    <div wicket:id="author" class="font-weight-bold">Василий Гинкул</div>
+                    <div wicket:id="message">Моё необычное сообщение</div>
+                    <div wicket:id="date" style="font-size: 13px">2020-19-05</div>
+                </div>
+            </div>
+            <form wicket:id="form">
+                <textarea wicket:id="message" class="w-75 h-25"></textarea>
+                <input wicket:id="submit" style="float: right;" type="submit" value="Отправить"/>
+            </form>
+        </div>
+        <div wicket:id="dialogsContainer">
+            <div wicket:id="dialogs" class="p-3 m-1" style="background-color: #EEEEEE">
+                <div wicket:id="username" style="font-size: 22px">Вася Гинкул</div>
+                <div wicket:id="lastMessage">Последнее сообщение</div>
+                <a wicket:id="write">Написать</a>
+            </div>
+        </div>
+    </wicket:extend>
+</body>
+</html>

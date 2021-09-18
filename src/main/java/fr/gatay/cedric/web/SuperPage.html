@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html style="height: 100%" lang="ru" xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body style="height: 100%">
+    <div class="container h-100">
+        <div class="row mt-4 h-100">
+            <div class="mh-100">
+                <div>
+                    <a href="/profile">Профиль</a>
+                </div>
+                <div>
+                    <a href="/">Новости</a>
+                </div>
+                <div>
+                    <a href="/friends">Друзья</a>
+                </div>
+                <div>
+                    <a href="/messages">Сообщения</a>
+                </div>
+                <div>
+                    <a href="/photos">Фотографии</a>
+                </div>
+                <div>
+                    <a href="/search">Все пользователи</a>
+                </div>
+                <div>
+                    <a href="/settings">Настройки</a>
+                </div>
+                <div>
+                    <a href="/logout">Выход</a>
+                </div>
+            </div>
+            <div class="ml-5 w-75 h-100">
+                <wicket:child/>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

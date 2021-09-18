@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+    <wicket:head>
+        <title>Настройки</title>
+    <style>
+        img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+        .settings {
+            margin-top: 7px;
+        }
+    </style>
+    </wicket:head>
+    <body>
+        <wicket:extend>
+            <form wicket:id="form">
+                <input wicket:id="fileUpload" type="file" accept=".jpg,.jpeg,.png"/>
+                <input wicket:id="savePhoto" type="submit" value="Сохранить"/>
+                <div class="settings">
+                    <img wicket:id="avatar" src=""/>
+                </div>
+                <div class="settings">
+                    Страна:
+                    <select wicket:id="city"/>
+                </div>
+                <div class="settings">
+                    Город:
+                    <select wicket:id="town"/>
+                </div>
+                <div class="settings">
+                    Язык:
+                    <select wicket:id="language"/>
+                </div>
+                <input wicket:id="save" type="submit" value="Сохранить"/>
+            </form>
+        </wicket:extend>
+    </body>
+</html>

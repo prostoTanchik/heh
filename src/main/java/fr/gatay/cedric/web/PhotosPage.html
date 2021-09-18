@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+    <title>Фотографии</title>
+    <meta charset="UTF-8"/>
+    <style>
+        img {
+            float: left;
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        #wrap {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 10px;
+        }
+    </style>
+</wicket:head>
+<body>
+<wicket:extend>
+    <span>Фотографии</span>
+    <form wicket:id="form">
+        <label>Добавить фото</label>
+        <input wicket:id="fileUpload" type="file" accept=".png,.jpeg,.jpg"/>
+        <input wicket:id="submit" type="submit" value="Добавить"/>
+    </form>
+    <div wicket:id="photosContainer" id="wrap">
+        <div wicket:id="photosView">
+            <img wicket:id="img"/>
+        </div>
+    </div>
+</wicket:extend>
+</body>
+</html>

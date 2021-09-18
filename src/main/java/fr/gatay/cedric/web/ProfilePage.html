@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+    <meta charset="UTF-8">
+    <title>Профиль</title>
+    <style>
+            img {
+                float: left;
+                width: 220px;
+                height: 220px;
+                object-fit: cover;
+                margin-right: 10px;
+            }
+
+            textarea {
+                width: 380px;
+            }
+    </style>
+</wicket:head>
+<body>
+    <wicket:extend>
+        <div style="height: 240px;">
+            <div>
+            <img wicket:id="avatar"/>
+                <span wicket:id="fullName" style="font-size: 25px">Вася Гинкул</span>
+            </div>
+            <div>
+                <span wicket:id="country">Страна: Россия</span>
+            </div>
+            <div>
+                <span wicket:id="city">Город: Москва</span>
+            </div>
+            <div>
+                <span wicket:id="language">Язык: Русский</span>
+            </div>
+            <br/>
+            <form wicket:id="form">
+                <label>
+                    <textarea wicket:id="textArea" placeholder="Новый пост..."></textarea><br/>
+                    <button wicket:id="newPost">Сделать пост</button>
+                </label>
+            </form><br/>
+        </div>
+        <div wicket:id="posts" style="position: absolute; width: 60%; float: left;">
+            <div style="margin-bottom: 5px; background-color: #EEEEEE; padding: 10px" wicket:id="post">
+                <div wicket:id="postText" style="font-size: 20px">Пост 1</div>
+                <div wicket:id="datePost" style="font-size: 15px">11.03.2020</div>
+                <div wicket:id="author" style="font-size: 15px">Вася Гинкул</div>
+                <form wicket:id="form">
+                    <input type="submit" wicket:id="edit" value="Редактировать"/><br/>
+                    <input type="submit" wicket:id="delete" value="Удалить пост"/><br/>
+                </form>
+            </div>
+        </div>
+    </wicket:extend>
+</body>
+</html>

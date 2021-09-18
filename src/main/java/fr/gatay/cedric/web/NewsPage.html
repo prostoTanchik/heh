@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+    <style>
+        textarea {
+            width: 400px;
+            height: 80px
+        }
+        img {
+            margin: 10px;
+            float: left;
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+        }
+    </style>
+</wicket:head>
+<body>
+    <wicket:extend>
+        <form wicket:id="form">
+            <label>
+                <textarea wicket:id="textArea" placeholder="Новый пост..."></textarea><br/>
+                <button wicket:id="newPost">Сделать пост</button>
+            </label>
+        </form><br/>
+        <div wicket:id="posts" style="position: absolute; width: 60%">
+            <div style="margin-bottom: 5px; background-color: #EEEEEE; padding: 10px" wicket:id="post">
+                <img wicket:id="avatar" />
+                <div wicket:id="postText" style="font-size: 20px">Пост 1</div>
+                <div wicket:id="datePost" style="font-size: 15px">11.03.2020</div>
+                <div wicket:id="author" style="font-size: 15px">Автор: Вася Гинкул</div>
+                <form wicket:id="form">
+                    <input type="submit" wicket:id="delete" value="Удалить пост"/><br/>
+                </form>
+            </div>
+        </div>
+    </wicket:extend>
+</body>
+</html>

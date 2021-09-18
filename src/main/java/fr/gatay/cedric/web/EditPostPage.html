@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+    <wicket:head>
+        <style>
+            textarea {
+                width: 60%;
+                height: 90px;
+            }
+        </style>
+        <title>Редактировать пост</title>
+    </wicket:head>
+    <body>
+        <wicket:extend>
+            <h3>Редактировать</h3>
+            <form wicket:id="form">
+                <textarea wicket:id="textArea"></textarea><br/>
+                <input wicket:id="submit" type="submit" value="Сохранить"/>
+            </form>
+            </wicket:extend>
+    </body>
+</html>
